@@ -4,9 +4,6 @@ import 'package:flutter/widgets.dart';
 import 'package:neru_lending/additional_file.dart';
 import 'package:neru_lending/industry_page.dart';
 
-
-
-
 class HomePage extends StatelessWidget {
   static const homePage = 'HomePage';
 
@@ -46,14 +43,18 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     AdditionalFiles additionalFiles = AdditionalFiles();
 
-
     return Scaffold(
       backgroundColor: Colors.black87,
       appBar: AppBar(
         backgroundColor: const Color(0xFF35B079),
-        title: Text(
-          'Home',
-          style: TextStyle(color: Colors.white, fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
+        title: Center(
+          child: Text(
+            'Home',
+            style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.w600),
+          ),
         ),
       ),
       body: Column(
@@ -62,7 +63,11 @@ class HomePage extends StatelessWidget {
           SizedBox(height: 20),
           Text(
             'Choose the Industry',
-            style: TextStyle(color: Colors.white, fontSize: 28, fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: 28,
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.w600),
           ),
           SizedBox(height: 20),
           Expanded(
@@ -94,7 +99,10 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
-                            _iconsMap[additionalFiles.mainIndustryList[index].name] ?? Icons.error, // Use icon associated with card name
+                            _iconsMap[additionalFiles
+                                    .mainIndustryList[index].name] ??
+                                Icons
+                                    .error, // Use icon associated with card name
                             size: 50,
                             color: const Color(0xFF35B079),
                           ),
