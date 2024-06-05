@@ -19,7 +19,6 @@ class NeruLending extends StatelessWidget {
       routes: {
         HomePage.homePage:(context)=> HomePage(),
         IndustryPage.industryPage:(context) => IndustryPage(),
-        ServicePage.servicePage:(context) => ServicePage(),
         BottomBar.bottomBar:(context) => BottomBar()
       },
     );
