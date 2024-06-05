@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:neru_lending/bottom_bar.dart';
 import 'package:neru_lending/home_page.dart';
 import 'package:neru_lending/industry_page.dart';
 import 'package:neru_lending/service_page.dart';
@@ -14,11 +15,12 @@ class NeruLending extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: HomePage.homePage,
+      initialRoute: BottomBar.bottomBar,
       routes: {
         HomePage.homePage:(context)=> HomePage(),
         IndustryPage.industryPage:(context) => IndustryPage(),
-        ServicePage.servicePage:(context) => ServicePage()
+        ServicePage.servicePage:(context) => ServicePage(),
+        BottomBar.bottomBar:(context) => BottomBar()
       },
     );
   }
